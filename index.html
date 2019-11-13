@@ -7,6 +7,7 @@
                 const go = new Go();
                 let result = await WebAssembly.instantiateStreaming(fetch("main.wasm"), go.importObject)
                 go.run(result.instance);
+
             }
             init();
        </script>
